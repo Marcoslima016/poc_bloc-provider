@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../lib.imports.dart';
 import 'home.imports.dart';
 
 class HomeView extends StatelessWidget {
@@ -24,8 +25,8 @@ class HomeView extends StatelessWidget {
 
             //------------------------------- BLOC BUILDER -----------------------------
 
-            BlocBuilder<HomeCubit, int>(
-              builder: (context, int state) {
+            BlocBuilder<HomeCubit, User>(
+              builder: (context, state) {
                 return Column(
                   children: [
                     GestureDetector(
@@ -42,7 +43,7 @@ class HomeView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Center(child: Text(state.toString())),
+                    Center(child: Text(state.nome.toString())),
                   ],
                 );
               },

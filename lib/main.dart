@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import 'lib.imports.dart';
 
 void main() {
+  Get.put<AppController>(AppController(), permanent: true);
   runApp(MyApp());
 }
 
