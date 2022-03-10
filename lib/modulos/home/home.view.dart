@@ -13,27 +13,38 @@ class HomeView extends StatelessWidget {
         title: Text("Home Page"),
       ),
       body: BlocProvider(
-        create: (context) => controller..init(),
+        create: (context) => HomeController(),
         child: Column(
           children: <Widget>[
-            GestureDetector(
-              onTap: () {
-                controller.increment();
-                // context.read<HomeController>().increment();
-              },
-              child: Container(
-                width: 100,
-                height: 40,
-                color: Colors.blue,
-                child: Text(
-                  "Testar!",
-                ),
-              ),
-            ),
             Text("Valor atual: "),
+
+            //------------------ BLOC BUILDER ----------------
+
             BlocBuilder<HomeController, HomeState>(
-              builder: (context, HomeState state) => Center(child: Text(state.count.toString())),
+              builder: (context, HomeState state) {
+                return Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        controller.increment();
+                        // context.read<HomeController>().increment();
+                      },
+                      child: Container(
+                        width: 100,
+                        height: 40,
+                        color: Colors.blue,
+                        child: Text(
+                          "Testar!",
+                        ),
+                      ),
+                    ),
+                    Center(child: Text(state.count.toString())),
+                  ],
+                );
+              },
             ),
+
+            //
           ],
         ),
       ),

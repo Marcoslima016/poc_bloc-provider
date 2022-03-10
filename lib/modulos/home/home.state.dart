@@ -9,7 +9,7 @@ class HomeState {
     count = 0;
   }
 
-  HomeState.increment() {
+  increment() {
     count = count! + 1;
   }
 }
