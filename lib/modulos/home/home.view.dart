@@ -17,7 +17,10 @@ class HomeView extends StatelessWidget {
         child: Column(
           children: <Widget>[
             GestureDetector(
-              onTap: controller.increment,
+              onTap: () {
+                controller.increment();
+                // context.read<HomeController>().increment();
+              },
               child: Container(
                 width: 100,
                 height: 40,

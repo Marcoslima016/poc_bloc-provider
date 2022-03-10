@@ -9,7 +9,7 @@ class HomeController extends Cubit<HomeState> {
   late String teste;
 
   Future<void> init() async {
-    //
+    HomeState.initialState();
   }
 
   Future increment() async {
