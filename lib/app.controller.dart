@@ -2,5 +2,6 @@ import 'lib.imports.dart';
 
 class AppController {
   //
-  late User loggedUser;
+  // late User loggedUser;
+  User loggedUser;
 }

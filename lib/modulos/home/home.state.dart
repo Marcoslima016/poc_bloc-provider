@@ -1,7 +1,7 @@
 class HomeState {
   //
 
-  int? count;
+  int count;
 
   HomeState({this.count = 0});
 
@@ -9,7 +9,7 @@ class HomeState {
     count = 0;
   }
 
-  increment() {
-    count = count! + 1;
+  HomeState.increment() {
+    count = count + 1;
   }
 }
