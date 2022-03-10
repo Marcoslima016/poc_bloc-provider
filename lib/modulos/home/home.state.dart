@@ -2,23 +2,23 @@ part of 'home.controller.dart';
 
 // // import 'package:equatable/equatable.dart';
 
-class HomeState extends Equatable {
-  //
+// class HomeState extends Equatable {
+//   //
 
-  int count;
+//   int count;
 
-  HomeState({this.count = 0});
+//   HomeState({this.count = 0});
 
-  HomeState.initialState() : count = 0;
+//   HomeState.initialState() : count = 0;
 
-  HomeState.increment(int stateValue) {
-    count = count + 1;
-  }
+//   HomeState.increment(int stateValue) {
+//     count = count + 1;
+//   }
 
-  @override
-  // TODO: implement props
-  List<Object> get props => [count];
-}
+//   @override
+//   // TODO: implement props
+//   List<Object> get props => [count];
+// }
 
 
 

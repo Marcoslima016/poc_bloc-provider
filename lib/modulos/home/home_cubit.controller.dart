@@ -4,10 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'home.imports.dart';
 
-part 'home.state.dart';
+// part 'home.state.dart';
 
-class HomeController extends Cubit<HomeState> {
-  HomeController() : super(HomeState.initialState());
+class HomeCubit extends Cubit<int> {
+  HomeCubit() : super(0);
   //
 
   // Future<void> init() async {
@@ -16,6 +16,6 @@ class HomeController extends Cubit<HomeState> {
   // }
 
   Future increment() async {
-    emit(HomeState.increment(state.count));
+    emit(state + 1);
   }
 }
