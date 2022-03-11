@@ -20,35 +20,50 @@ class LoginView3 extends StatelessWidget {
               //------------------------------------- ITENS CENTRAIS -------------------------------------
 
               Scaffold(
-                // resizeToAvoidBottomInset: false,
                 backgroundColor: Colors.white,
-                // resizeToAvoidBottomInset: false,
+                body: SingleChildScrollView(
+                  child: Container(
+                    width: w * 100,
+                    height: h * 100,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ///---------------- LOGO ----------------
+                        ///
+                        Container(
+                          width: w * 35,
+                          child: Image.asset("assets/logo1.png"),
+                        ),
 
-                body: Container(
-                  width: w * 100,
-                  height: h * 100,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ///---------------- LOGO ----------------
-                      ///
-                      Container(
-                        width: w * 35,
-                        child: Image.asset("assets/logo1.png"),
-                      ),
+                        SizedBox(height: h * 1.5),
 
-                      // Image.asset("assets/logo1.png"),
+                        Text(
+                          "Cerveja na mão num passe de mágica",
+                          textAlign: TextAlign.center,
+                        ),
 
-                      ///------------- FORMULARIO -------------
-                      ///
-                      LoginForm(),
+                        // Image.asset("assets/logo1.png"),
 
-                      ///---------- BOTAO CADASTRAR -----------
+                        ///------------- FORMULARIO -------------
 
-                      // SizedBox(height: 30),
-                      // Text("CADASTRAR!"),
-                    ],
+                        Padding(
+                          padding: EdgeInsets.only(top: h * 4, bottom: h * 2.6),
+                          child: Text(
+                            'Entre com seu login',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: h * 3.2, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+
+                        LoginForm(),
+
+                        ///---------- BOTAO CADASTRAR -----------
+
+                        // SizedBox(height: 30),
+                        // Text("CADASTRAR!"),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -59,7 +74,14 @@ class LoginView3 extends StatelessWidget {
               ///
               Positioned(
                 bottom: 0,
-                child: Container(height: h * 11, width: w * 100, color: Colors.red),
+                child: Container(
+                  height: h * 11,
+                  width: w * 100,
+                  color: Colors.transparent,
+                  child: Center(
+                    child: Text("Problema com o acesso? Solicite ajuda"),
+                  ),
+                ),
               ),
 
               // Text("!!!!!!!!!"),

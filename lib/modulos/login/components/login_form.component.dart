@@ -16,10 +16,11 @@ class LoginForm extends StatelessWidget {
             //----------------------- INPUT USUARIO -----------------------
 
             Padding(
-              padding: EdgeInsets.only(top: 18),
+              padding: EdgeInsets.only(top: 0),
               child: LoginInput(
                 hintText: "Seu e-mail ou cpf",
                 isObscure: false,
+                keyboardPadding: h * 34,
               ),
             ),
 
@@ -30,13 +31,18 @@ class LoginForm extends StatelessWidget {
               child: LoginInput(
                 hintText: "senha",
                 isObscure: true,
+                keyboardPadding: h * 28,
               ),
             ),
+
+            // TextFormField(
+            //   scrollPadding: const EdgeInsets.only(bottom: 200),
+            // ),
 
             //--------------------- ESQUECEU A SENHA ---------------------
 
             Padding(
-              padding: EdgeInsets.only(top: 15),
+              padding: EdgeInsets.only(top: 18),
               child: Container(
                 width: w * 100,
                 child: Row(
@@ -52,12 +58,12 @@ class LoginForm extends StatelessWidget {
 
             Padding(
               padding: EdgeInsets.only(
-                top: 45,
-                // bottom: 4,
+                top: 20,
+                bottom: 0,
               ),
               child: Container(
                 width: w * 100,
-                height: h * 10,
+                height: h * 8.8,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(80),
                   color: Color.fromRGBO(255, 179, 0, 1.0),
