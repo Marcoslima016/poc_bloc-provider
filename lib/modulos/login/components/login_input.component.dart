@@ -5,13 +5,13 @@ class LoginInput extends StatelessWidget {
   bool isObscure;
   String hintText;
   TextEditingController textController = TextEditingController();
-  Color borderColor = Colors.grey[700];
+  Color? borderColor = Colors.grey[700];
   double keyboardPadding;
 
   LoginInput({
-    @required this.isObscure,
-    @required this.hintText,
-    @required this.textController,
+    required this.isObscure,
+    required this.hintText,
+    required this.textController,
     this.keyboardPadding = 0,
   });
 

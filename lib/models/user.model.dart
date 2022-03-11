@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 class User {
-  String nome;
-  String jwt;
+  String? nome;
+  String? jwt;
   User({
     this.nome,
     this.jwt,

@@ -22,6 +22,7 @@ class LoginMockDataSource implements ILoginDatasource {
     } catch (e) {
       // return Exception(e);
     }
+    return User();
   }
 }
 
@@ -29,8 +30,8 @@ class LoginMockDataSource implements ILoginDatasource {
 
 class MockHttpClient {
   //POST
-  Future<Response> post(String endPoint, {bool authenticatedRequest = false, Map dataJson}) async {
-    if (dataJson["user"] != "admin" || dataJson["pass"] != "admin") {
+  Future<Response> post(String endPoint, {bool authenticatedRequest = false, Map? dataJson}) async {
+    if (dataJson?["user"] != "admin" || dataJson?["pass"] != "admin") {
       Exception("Usuário ou senha inválidos");
     }
 
