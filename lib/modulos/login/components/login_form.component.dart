@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 
+import '../../../lib.imports.dart';
 import '../login.imports.dart';
 import 'components.imports.dart';
 
@@ -73,9 +75,7 @@ class LoginForm extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   var t1 = controller.inputUser.text;
-
-                  var point = "";
-
+                  Get.find<AppController>();
                   controller.sigin(context);
                 },
                 child: Container(
@@ -83,7 +83,7 @@ class LoginForm extends StatelessWidget {
                   height: h * 8.8,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(80),
-                    color: Color.fromRGBO(255, 179, 0, 1.0),
+                    color: Get.find<AppController>().style.primaryColor,
                     //229 177 77
                   ),
                   child: Center(
