@@ -14,18 +14,3 @@ class HomeController extends Cubit<User?> {
     emit(userData);
   }
 }
-
-
-// class HomeController extends Cubit<User> {
-//   HomeController()
-//       : super(
-//           User(nome: "", jwt: ""),
-//         );
-//   //
-
-//   Future getUserData() async {
-//     AppController appController = Get.find<AppController>();
-//     User userData = appController.loggedUser;
-//     emit(userData);
-//   }
-// }
