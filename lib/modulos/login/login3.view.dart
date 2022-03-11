@@ -7,6 +7,8 @@ class LoginView3 extends StatelessWidget {
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height / 100;
     double w = MediaQuery.of(context).size.width / 100;
+    final bottom = MediaQuery.of(context).viewInsets.bottom;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
@@ -20,34 +22,33 @@ class LoginView3 extends StatelessWidget {
               Scaffold(
                 // resizeToAvoidBottomInset: false,
                 backgroundColor: Colors.white,
-                body: SingleChildScrollView(
-                  // reverse: true,
-                  child: Container(
-                    width: w * 100,
-                    height: h * 100,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        ///---------------- LOGO ----------------
-                        ///
-                        Container(
-                          width: w * 35,
-                          child: Image.asset("assets/logo1.png"),
-                        ),
+                // resizeToAvoidBottomInset: false,
 
-                        // Image.asset("assets/logo1.png"),
+                body: Container(
+                  width: w * 100,
+                  height: h * 100,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ///---------------- LOGO ----------------
+                      ///
+                      Container(
+                        width: w * 35,
+                        child: Image.asset("assets/logo1.png"),
+                      ),
 
-                        ///------------- FORMULARIO -------------
-                        ///
-                        LoginForm(),
+                      // Image.asset("assets/logo1.png"),
 
-                        ///---------- BOTAO CADASTRAR -----------
+                      ///------------- FORMULARIO -------------
+                      ///
+                      LoginForm(),
 
-                        // SizedBox(height: 30),
-                        // Text("CADASTRAR!"),
-                      ],
-                    ),
+                      ///---------- BOTAO CADASTRAR -----------
+
+                      // SizedBox(height: 30),
+                      // Text("CADASTRAR!"),
+                    ],
                   ),
                 ),
               ),
