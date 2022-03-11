@@ -31,12 +31,12 @@ class LoginView3 extends StatelessWidget {
                       children: [
                         ///---------------- LOGO ----------------
                         ///
-                        // Container(
-                        //   width: w * 35,
-                        //   child: Image.asset("assets/logo1.png"),
-                        // ),
+                        Container(
+                          width: w * 35,
+                          child: Image.asset("assets/logo1.png"),
+                        ),
 
-                        Image.asset("assets/logo1.png"),
+                        // Image.asset("assets/logo1.png"),
 
                         ///------------- FORMULARIO -------------
                         ///
