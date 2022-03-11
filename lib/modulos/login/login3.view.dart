@@ -18,32 +18,36 @@ class LoginView3 extends StatelessWidget {
               //------------------------------------- ITENS CENTRAIS -------------------------------------
 
               Scaffold(
+                // resizeToAvoidBottomInset: false,
                 backgroundColor: Colors.white,
-                body: Container(
-                  width: w * 100,
-                  height: h * 100,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ///---------------- LOGO ----------------
-                      ///
-                      // Container(
-                      //   width: w * 35,
-                      //   child: Image.asset("assets/logo1.png"),
-                      // ),
+                body: SingleChildScrollView(
+                  reverse: true,
+                  child: Container(
+                    width: w * 100,
+                    height: h * 100,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ///---------------- LOGO ----------------
+                        ///
+                        // Container(
+                        //   width: w * 35,
+                        //   child: Image.asset("assets/logo1.png"),
+                        // ),
 
-                      Image.asset("assets/logo1.png"),
+                        Image.asset("assets/logo1.png"),
 
-                      ///------------- FORMULARIO -------------
-                      ///
-                      LoginForm(),
+                        ///------------- FORMULARIO -------------
+                        ///
+                        LoginForm(),
 
-                      ///---------- BOTAO CADASTRAR -----------
+                        ///---------- BOTAO CADASTRAR -----------
 
-                      // SizedBox(height: 30),
-                      // Text("CADASTRAR!"),
-                    ],
+                        // SizedBox(height: 30),
+                        // Text("CADASTRAR!"),
+                      ],
+                    ),
                   ),
                 ),
               ),
