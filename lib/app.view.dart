@@ -11,7 +11,6 @@ class AppView extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: LoginView(),
       onGenerateRoute: AppRouter().generateRoute,
       initialBinding: AppBinding(),
     );

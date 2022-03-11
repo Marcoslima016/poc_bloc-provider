@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../../lib.imports.dart';
 import 'login.imports.dart';
 
-class LoginController extends Cubit<LoginState> {
+class LoginController {
   //
 
   LoginRepository repository = LoginRepository();
@@ -14,10 +14,6 @@ class LoginController extends Cubit<LoginState> {
 
   TextEditingController inputUser = TextEditingController();
   TextEditingController inputPass = TextEditingController();
-
-  LoginController() : super(LoginState()) {
-    //
-  }
 
   Future sigin(BuildContext context) async {
     try {

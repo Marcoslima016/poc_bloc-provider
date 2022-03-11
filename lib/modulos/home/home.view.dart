@@ -32,9 +32,6 @@ class WidgetTeste extends StatelessWidget {
       ),
       body: Stack(
         children: <Widget>[
-          //
-
-          // Text("Valor atual: "),
           BlocBuilder<HomeController, User?>(
             builder: (context, User? state) {
               return Positioned(
@@ -86,30 +83,9 @@ class WidgetTeste extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Get.find<AppController>().style.primaryColor,
                       padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                      // textStyle: TextStyle(
-                      //   fontSize: 30,
-                      //   fontWeight: FontWeight.bold,
-                      // ),
                     ),
                   ),
                 ),
-
-                //  GestureDetector(
-                //   onTap: () {
-                //     // controller.getUserData();
-                //     var teste = context.read<HomeController>();
-                //     var point = "";
-                //     context.read<HomeController>().getUserData();
-                //   },
-                //   child: Container(
-                //     width: 100,
-                //     height: 40,
-                //     color: Colors.blue,
-                //     child: Text(
-                //       "Testar!",
-                //     ),
-                //   ),
-                // ),
               ),
             ),
           ),

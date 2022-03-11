@@ -46,8 +46,6 @@ class LoginView extends StatelessWidget {
                           style: TextStyle(fontSize: 12),
                         ),
 
-                        // Image.asset("assets/logo1.png"),
-
                         ///------------- FORMULARIO -------------
 
                         Padding(
@@ -117,8 +115,6 @@ class LoginView extends StatelessWidget {
                   ),
                 ),
               ),
-
-              // Text("!!!!!!!!!"),
             ],
           ),
         ),

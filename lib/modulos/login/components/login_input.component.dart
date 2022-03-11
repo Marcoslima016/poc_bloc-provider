@@ -33,8 +33,8 @@ class LoginInput extends StatelessWidget {
         width: w * 100,
         isObscure: isObscure,
         textStyle: TextStyleModel(
-          textColor: Colors.grey[800],
-          textSize: w * 6,
+          textColor: Colors.grey[700],
+          textSize: w * 3.2,
         ),
         // textStyle: ,
 
@@ -56,7 +56,7 @@ class LoginInput extends StatelessWidget {
         keyboardPadding: this.keyboardPadding,
         icon: suffixIcon,
         focusedIconsColor: Get.find<AppController>().style.primaryColor,
-        contentPadding: EdgeInsets.only(top: h * 2.4, bottom: h * 2.4, left: w * 3.8),
+        contentPadding: EdgeInsets.only(top: h * 2.6, bottom: h * 2.6, left: w * 3.8),
         validation: NotEmptyValidation(onValidationFail: (value) {}, validationFailTxt: textValidate),
       ),
     );

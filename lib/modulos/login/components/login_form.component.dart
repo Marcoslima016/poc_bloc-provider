@@ -39,7 +39,7 @@ class LoginForm extends StatelessWidget {
             //------------------------ INPUT SENHA ------------------------
 
             Padding(
-              padding: EdgeInsets.only(top: 18),
+              padding: EdgeInsets.only(top: 16),
               child: LoginInput(
                 hintText: "Senha",
                 isObscure: true,
@@ -49,14 +49,9 @@ class LoginForm extends StatelessWidget {
                 suffixIcon: Icon(
                   Icons.visibility,
                   size: 25,
-                  // color: Get.find<AppController>().style.primaryColor,
                 ),
               ),
             ),
-
-            // TextFormField(
-            //   scrollPadding: const EdgeInsets.only(bottom: 200),
-            // ),
 
             //--------------------- ESQUECEU A SENHA ---------------------
 
