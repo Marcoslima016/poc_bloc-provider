@@ -33,7 +33,7 @@ dependencies:
   # custom_components: 
   #   path: ../../1flutter_projects/1flutter_packages_v2/projeto-custom_components/dev/custom_components
   custom_components: 
-    path: ../custom_components
+    path: packages/custom_components
 
 dev_dependencies:
   flutter_test:
