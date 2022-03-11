@@ -6,7 +6,7 @@ class HomeController extends Cubit<HomeState> {
   HomeController() : super(HomeState.initialState());
   //
 
-  late String teste;
+  String teste;
 
   Future<void> init() async {
     //

@@ -1,7 +1,7 @@
 class HomeState {
   //
 
-  late int count;
+  int count;
 
   HomeState();
 
