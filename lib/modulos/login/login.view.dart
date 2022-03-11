@@ -9,34 +9,38 @@ class LoginView extends StatelessWidget {
     double w = MediaQuery.of(context).size.width / 100;
     return Scaffold(
       body: Container(
-        width: w * 100,
-        height: h * 100,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ///---------------- LOGO ----------------
+        // width: w * 100,
+        // height: h * 100,
+        child: SingleChildScrollView(
+          reverse: true,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ///---------------- LOGO ----------------
+              SizedBox(height: 240),
 
-            ///------------- FORMULARIO -------------
-            ///
+              ///------------- FORMULARIO -------------
+              ///
+              Image.asset("assets/logo1.png"),
+              LoginForm(),
 
-            LoginForm(),
+              // Container(
+              //   height: h * 90,
+              //   child: Column(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     crossAxisAlignment: CrossAxisAlignment.center,
+              //     children: [
+              //       LoginForm(),
+              //     ],
+              //   ),
+              // ),
 
-            // Container(
-            //   height: h * 90,
-            //   child: Column(
-            //     mainAxisAlignment: MainAxisAlignment.center,
-            //     crossAxisAlignment: CrossAxisAlignment.center,
-            //     children: [
-            //       LoginForm(),
-            //     ],
-            //   ),
-            // ),
+              ///------------- CADASTRAR --------------
 
-            ///------------- CADASTRAR --------------
-
-            ///---------- SOLICITAR AJUDA -----------
-          ],
+              ///---------- SOLICITAR AJUDA -----------
+            ],
+          ),
         ),
       ),
     );

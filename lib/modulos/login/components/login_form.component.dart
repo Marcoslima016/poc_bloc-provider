@@ -10,7 +10,7 @@ class LoginForm extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.only(left: w * 5, right: w * 5.8),
-      child: Container(
+      child: Form(
         child: Column(
           children: [
             //----------------------- INPUT USUARIO -----------------------
@@ -33,6 +33,8 @@ class LoginForm extends StatelessWidget {
               ),
             ),
 
+            Padding(padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom)),
+
             //--------------------- ESQUECEU A SENHA ---------------------
 
             Padding(
@@ -51,7 +53,10 @@ class LoginForm extends StatelessWidget {
             //----------------------- BOTÃO ACESSAR -----------------------
 
             Padding(
-              padding: EdgeInsets.only(top: 45),
+              padding: EdgeInsets.only(
+                top: 45,
+                bottom: 4,
+              ),
               child: Container(
                 width: w * 100,
                 height: h * 10,
