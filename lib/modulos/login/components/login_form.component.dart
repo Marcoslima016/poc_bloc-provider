@@ -18,8 +18,9 @@ class LoginForm extends StatelessWidget {
     double w = MediaQuery.of(context).size.width / 100;
 
     return Padding(
-      padding: EdgeInsets.only(left: w * 5, right: w * 5.8),
+      padding: EdgeInsets.only(left: w * 5.6, right: w * 5.6),
       child: Form(
+        key: controller.formKey,
         child: Column(
           children: [
             //----------------------- INPUT USUARIO -----------------------
@@ -31,6 +32,7 @@ class LoginForm extends StatelessWidget {
                 isObscure: false,
                 keyboardPadding: h * 34,
                 textController: controller.inputUser,
+                textValidate: "Informe um email ou CPF válido!",
               ),
             ),
 
@@ -39,10 +41,16 @@ class LoginForm extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 18),
               child: LoginInput(
-                hintText: "senha",
+                hintText: "Senha",
                 isObscure: true,
-                keyboardPadding: h * 28,
+                keyboardPadding: h * 22,
                 textController: controller.inputPass,
+                textValidate: "A senha deve conter 6 digítos",
+                suffixIcon: Icon(
+                  Icons.visibility,
+                  size: 25,
+                  // color: Get.find<AppController>().style.primaryColor,
+                ),
               ),
             ),
 
@@ -59,7 +67,12 @@ class LoginForm extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text("Esqueceu a senha?"),
+                    Text(
+                      "Esqueceu a senha?",
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -80,14 +93,19 @@ class LoginForm extends StatelessWidget {
                 },
                 child: Container(
                   width: w * 100,
-                  height: h * 8.8,
+                  height: h * 8.6,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(80),
                     color: Get.find<AppController>().style.primaryColor,
                     //229 177 77
                   ),
                   child: Center(
-                    child: Text("Entrar"),
+                    child: Text(
+                      "Entrar",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
                 ),
               ),

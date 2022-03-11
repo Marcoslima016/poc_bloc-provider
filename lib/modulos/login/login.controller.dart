@@ -10,6 +10,8 @@ class LoginController extends Cubit<LoginState> {
 
   LoginRepository repository = LoginRepository();
 
+  final formKey = GlobalKey<FormState>();
+
   TextEditingController inputUser = TextEditingController();
   TextEditingController inputPass = TextEditingController();
 
@@ -19,6 +21,12 @@ class LoginController extends Cubit<LoginState> {
 
   Future sigin(BuildContext context) async {
     try {
+      if (formKey.currentState!.validate()) {
+        formKey.currentState!.save();
+      } else {
+        return;
+      }
+
       AppController appController = Get.find<AppController>();
       User? userData = await repository.authenticateUser(
         LoginCredentials(

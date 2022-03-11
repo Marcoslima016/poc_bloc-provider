@@ -1,18 +1,25 @@
 import 'package:custom_components/lib.imports.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../lib.imports.dart';
 
 class LoginInput extends StatelessWidget {
   bool isObscure;
   String hintText;
   TextEditingController textController = TextEditingController();
-  Color? borderColor = Colors.grey[700];
+  Color? borderColor = Colors.grey[850];
   double keyboardPadding;
+  Icon? suffixIcon;
+  String textValidate;
 
   LoginInput({
     required this.isObscure,
     required this.hintText,
     required this.textController,
+    this.suffixIcon,
     this.keyboardPadding = 0,
+    this.textValidate = "não pode ser vazio",
   });
 
   @override
@@ -33,20 +40,24 @@ class LoginInput extends StatelessWidget {
 
         textFieldController: textController,
         hintText: HintTextModel(
-          hintTextColor: Colors.grey[400],
+          hintTextColor: Colors.grey[700],
           hintText: hintText,
-          hintTextSize: w * 5.2,
+          hintTextSize: w * 4.1,
           hintTextStroke: 3.0,
         ),
         borderStyle: CustomBorderStyle(
           borderStroke: 1.2,
-          enableBorderColor: Colors.grey[400],
+          enableBorderColor: Colors.grey,
           errorBorderColor: Colors.red,
           focusedBorderColor: borderColor,
         ),
-        borderRadius: 8,
+        borderRadius: 5.4,
         // icon: icon,
         keyboardPadding: this.keyboardPadding,
+        icon: suffixIcon,
+        focusedIconsColor: Get.find<AppController>().style.primaryColor,
+        contentPadding: EdgeInsets.only(top: h * 2.4, bottom: h * 2.4, left: w * 3.8),
+        validation: NotEmptyValidation(onValidationFail: (value) {}, validationFailTxt: textValidate),
       ),
     );
   }
