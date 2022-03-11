@@ -21,7 +21,7 @@ class LoginView3 extends StatelessWidget {
                 // resizeToAvoidBottomInset: false,
                 backgroundColor: Colors.white,
                 body: SingleChildScrollView(
-                  reverse: true,
+                  // reverse: true,
                   child: Container(
                     width: w * 100,
                     height: h * 100,
