@@ -15,7 +15,10 @@ class AppRouter {
           builder: (_) => HomeView(),
         );
       default:
-        return null;
+        return MaterialPageRoute(
+          builder: (_) => Container(),
+        );
+        ;
     }
   }
 

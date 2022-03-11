@@ -44,11 +44,11 @@ class WidgetTeste extends StatelessWidget {
           ),
 
           Text("Valor atual: "),
-          BlocBuilder<HomeController, User>(
-            builder: (context, User state) {
+          BlocBuilder<HomeController, User?>(
+            builder: (context, User? state) {
               return Center(
                 child: Text(
-                  state.nome.toString(),
+                  state!.nome.toString(),
                 ),
               );
             },

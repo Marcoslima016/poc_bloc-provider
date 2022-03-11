@@ -20,7 +20,7 @@ class LoginController extends Cubit<LoginState> {
   Future sigin(BuildContext context) async {
     try {
       AppController appController = Get.find<AppController>();
-      User userData = await repository.authenticateUser(
+      User? userData = await repository.authenticateUser(
         LoginCredentials(
           user: inputUser.text,
           pass: inputPass.text,

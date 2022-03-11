@@ -1,15 +1,15 @@
-class HomeState {
-  //
+// class HomeState {
+//   //
 
-  int count;
+//   int count;
 
-  HomeState();
+//   HomeState();
 
-  HomeState.initialState() {
-    count = 0;
-  }
+//   HomeState.initialState() {
+//     count = 0;
+//   }
 
-  HomeState.increment() {
-    count++;
-  }
-}
+//   HomeState.increment() {
+//     count++;
+//   }
+// }

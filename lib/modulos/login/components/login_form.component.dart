@@ -7,7 +7,7 @@ import 'components.imports.dart';
 class LoginForm extends StatelessWidget {
   LoginController controller;
   LoginForm({
-    @required this.controller,
+    required this.controller,
   });
 
   @override
